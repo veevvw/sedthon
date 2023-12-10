@@ -14260,7 +14260,7 @@ local NamecBots = {
 return bot.sendText(msg.chat_id,msg.id, NamecBots[math.random(#NamecBots)],"md",true)  
 end
 end
-if text == 'جيت' then
+if text == 'جيت' or text == 'احيت' then
 if redis:get(bot_id.."Status:Reply"..msg.chat_id) then
 local NamecBots = {
 'منور',
@@ -14501,7 +14501,7 @@ local NamecBots = {
 return bot.sendText(msg.chat_id,msg.id, NamecBots[math.random(#NamecBots)],"md",true)  
 end
 end
-if text == 'بطلع' or text =='رح اطلع' or text =='رح بطلع' then
+if text == 'بطلع' or text =='راح اطلع' or text =='راح اغادر' then
 if redis:get(bot_id.."Status:Reply"..msg.chat_id) then
 local NamecBots = {
 'اذلف',
@@ -14947,7 +14947,7 @@ bot.sendText(msg.chat_id,msg.id,"*- الاسم : *( "..(t).." *)*\n*- المعر
 end
 end
 if text == 'مبرمج السورس' or text == 'coder' or text == 'المبرمج' then
-local UserId_Info = bot.searchPublicChat("rFrFF")
+local UserId_Info = bot.searchPublicChat("NUNUU")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
@@ -14975,7 +14975,7 @@ end
 end
 end
 if text == 'مطور السورس' then
-local UserId_Info = bot.searchPublicChat("rFrFF")
+local UserId_Info = bot.searchPublicChat("NUNUU")
 if UserId_Info.id then
 local UserInfo = bot.getUser(UserId_Info.id)
 if UserInfo.username and UserInfo.username ~= "" then
@@ -15815,7 +15815,7 @@ end
 return bot.sendText(msg.chat_id,msg.id,banusername,"md",true, false, false, false, reply_markup) 
 end
 
-if text == 'نادي المطور' or text == 'بدي مساعدة' or text == 'بدي مساعده' then  
+if text == 'نادي المطور' or text == 'صيح المطور' or text == 'بدي مساعده' then  
 bot.sendText(msg.chat_id,msg.id,"- تم إرسال طلبك للمطور سيتم الرد عليك قريباً .")
 local Get_Chat = bot.getChat(msg.chat_id)
 local Info_Chats = bot.getSupergroupFullInfo(msg.chat_id)
@@ -17439,7 +17439,7 @@ Text = "- تم زواجك من ↫⤈ \n["..tagname.."](tg://user?id="..Zozne.me
 bot.sendText(msg.chat_id,msg.id,Text,"md",true, false, false, false, reply_markup)
 end 
 
-if text == "انا مين" or text == 'مين انا' then
+if text == "منو اني" or text == 'اني منو' then
 if not redis:get(bot_id.."anamen"..msg.chat_id) then
 return bot.sendText(msg.chat_id,msg.id,"- انا مين معطل من قبل المشرفين","md",true)
 end
@@ -23769,8 +23769,8 @@ if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or tex
 local Text = "*- welcome to the ᴀʟ- ʜᴀʟᴀғɪɪ sᴏᴜʀᴄᴇ .*\n"
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- 𝘢𝘭𝘩𝘢𝘭𝘢𝘧𝘪𝘪 𝘴𝘰𝘶𝘳𝘤𝘦 .',url="https://t.me/VEEVVW"}},
-{{text = '- CoDeR .',url="https://t.me/rFrFF"}},
+{{text = '- ᥉᥆ᥙᖇᥴᥱ ᥉ᥱძƚɦ᥆ꪀ 🐉 .',url="https://t.me/VEEVVW"}},
+{{text = '- CoDeR .',url="https://t.me/NUNUU"}},
 }
 https.request("https://api.telegram.org/bot"..Token.."/sendphoto?chat_id=" .. msg.chat_id .. "&photo=https://t.me/VEEVVW&caption=".. URL.escape(Text).."&photo=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
 end
